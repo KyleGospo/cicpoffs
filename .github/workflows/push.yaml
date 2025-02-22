@@ -21,11 +21,11 @@ jobs:
       - run: "cd packaging; sudo alien -r -c -v debian.deb; cd .."
       - run: "cd packaging; mv $(ls -1 | grep cicpoffs | grep rpm | head -1) debian.rpm; cd .."
       - run: "cp packaging/debian.rpm packaging/cicpoffs.rpm"
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: cicpoffs.deb
           path: packaging/debian.deb
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: cicpoffs.rpm
           path: packaging/debian.rpm
@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: "docker run --rm -v ./:/repo archlinux /bin/bash /repo/packaging/arch/bash.sh"
       - run: "sudo cp packaging/arch/cicpoffs.tar.zst packaging/cicpoffs.tar.zst"
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: cicpoffs.tar.zst
           path: packaging/arch/cicpoffs.tar.zst
