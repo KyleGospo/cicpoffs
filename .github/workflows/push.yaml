@@ -8,7 +8,7 @@ jobs:
   Build_for_DEB:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: "sudo apt update"
       - run: "sudo apt install -y gcc g++ autotools-dev fuse3 libfuse-dev libfuse3-dev libattr1-dev alien"
       - run: "mkdir -p packaging/debian/usr/bin"
@@ -40,7 +40,7 @@ jobs:
   Build_for_ARCH:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: "docker run --rm -v ./:/repo archlinux /bin/bash /repo/packaging/arch/bash.sh"
       - run: "sudo cp packaging/arch/cicpoffs.tar.zst packaging/cicpoffs.tar.zst"
       - uses: actions/upload-artifact@v3
