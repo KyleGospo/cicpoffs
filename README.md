@@ -19,10 +19,6 @@ The difference is that:
 
 Check the [releases](https://github.com/adlerosn/cicpoffs/releases/latest) tab.
 
-## Preserve inode number
-
-Add `-o use_ino` argument to the commandline otherwise each case combination that points to the same file will get different inodes.
-
 ## License
 
 GPLv2
