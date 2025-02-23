@@ -17,7 +17,7 @@ The difference is that:
 
 ## Pre-built packages
 
-Check the [releases](https://github.com/adlerosn/cicpoffs/releases/latest) tab.
+Check the [releases](https://github.com/KyleGospo/cicpoffs/releases/latest) tab.
 
 ## License
 
